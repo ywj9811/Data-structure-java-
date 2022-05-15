@@ -113,7 +113,65 @@ public class LinkedListTester {
 				data.scanData("머리에 삽입", Data.No | Data.Name);
 				list.addFirst(data);
 				break;
+				
+			case ADD_LAST : 
+				data = new Data();
+				data.scanData("꼬리에 삽입", Data.No | Data.Name);
+				list.addFirst(data);
+				break;
+				
+			case RMV_FIRST : 
+				data = new Data();
+				list.removeFirst();
+				break;
+				
+			case RMV_LAST : 
+				data = new Data();
+				list.removeLast();
+				break;
+				
+			case RMV_CRNT : 
+				data = new Data();
+				list.removeCurrentNode();
+				break;
+				
+			case SEARCH_NO : 
+				temp.scanData("검색", Data.No);
+				ptr = list.search(temp, Data.NO_ORDER);
+				
+				if(ptr == null)
+					System.out.println("그 번호의 데이터가 없습니다.");
+				else
+					System.out.println("검색 성공 : " + ptr);
+				break;
+				
+			case SEARCH_NAME : 
+				temp.scanData("검색", Data.Name);
+				ptr = list.search(temp, Data.NAME_ORDER );
+				
+				if(ptr == null)
+					System.out.println("그 이름의 데이터가 없습니다.");
+				else
+					System.out.println("검색 성공 : " + ptr);
+				break;
+				
+			case NEXT :
+				list.next();
+				break;
+				
+			case PRINT_CRNT :
+				list.printCurrentNode();
+				break;
+			
+			case DUMP :
+				list.dump();
+				break;
+				
+			case CLEAR :
+				list.clear();
+				break;
 			}
-		}
+		} while( menu != Menu.TERMINATE);
 	}
 }
+
