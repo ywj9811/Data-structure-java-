@@ -125,5 +125,20 @@ public class LinkedList<E> {
 		}
 	}
 	
-	
+	public void purge(Comparator<? super E> c) {
+		//서로 같은 노드를 찾아서 모두 삭제.
+		
+	}
+//	public E search(E obj, Comparator<? super E> c) { //E클래스의 c를 통해 비교
+//		Node<E> ptr = head; //현재 스캔중인 노드
+//		
+//		while (ptr != null) {
+//			if(c.compare(obj, ptr.data) == 0) {
+//				crnt = ptr;
+//				return ptr.data; //compare( ) == 0이니 검색 성공
+//			}
+//			ptr = ptr.next;
+//		}
+//		return null; //return하지 못하고 끝까지 검색해서 나올 경우 검색 실패
+//	}
 }

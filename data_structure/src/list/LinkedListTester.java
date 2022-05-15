@@ -27,9 +27,9 @@ public class LinkedListTester {
 			
 			if((sw & Name) == Name) {
 				System.out.print("이름 : ");
-				name = sc.nextLine();
+				name = sc.next();
 			}
-		} //데이터를 입력받음
+		} //데이터를 입력받음ㅎ 
 		
 		public static final Comparator<Data> NO_ORDER = new NoOrderComparator();
 		//회원번호로 순서를 매기는 comparator
