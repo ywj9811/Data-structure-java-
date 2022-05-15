@@ -14,7 +14,7 @@ public class AryLinkedListTester {
 		private String name; //이름
 		
 		public String toString() {
-			return "(" + no + ")" + name;
+			return no + "/" + name;
 		} //문자열로 반환
 		
 		void scanData(String guide, int sw) {
